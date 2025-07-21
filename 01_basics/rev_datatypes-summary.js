@@ -73,9 +73,3 @@
       console.log(typeof heros);  // object
 
       console.log(typeof myobj); //objects
-
-
-
-
-
-   
