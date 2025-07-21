@@ -41,7 +41,7 @@
               Objects
               Functions
 
-            when data type is checked all the above 3 non premitive values are considered as an OBJECT value 
+            when data type is checked all the above 3 non premitive values are considered as an OBJECT value
               */
 
     const heros = ["shaktiman","naagraj","doga"] //array
@@ -73,3 +73,9 @@
       console.log(typeof heros);  // object
 
       console.log(typeof myobj); //objects
+
+
+
+
+
+   
