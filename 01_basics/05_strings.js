@@ -49,3 +49,16 @@ Therefore, gameName.charAt(NaN) → gameName.charAt(0)
 gameName.charAt(0) → "T" (because "T" is the first character in "Tanmay")
 */
 
+console.log(gameName.charAt(2)); // output: "n"
+
+
+// char to num
+console.log(gameName.indexOf('a'));
+
+
+const newstring = gameName.substring(0,4)
+console.log(newstring);
+
+
+const anotherString = gameName.slice(-8,4) //it becomes (0,4)because -8 is before the string starts
+console.log(anotherString)
