@@ -15,7 +15,7 @@ console.log(name + repoCount + " value");  // not recommneded out dated
 console.log(`hello my name is ${name} and my repo count is ${repoCount}`);//  `` string interpolation ...creating placeholders
 // we can edit it on the way
 
-const gameName = new String('tanmay-sl')
+const gameName = new String('tanmay-sl-com')
 // String {'tanmay'}
 // 0: "t"
 // 1: "a"
@@ -61,4 +61,19 @@ console.log(newstring);
 
 
 const anotherString = gameName.slice(-8,4) //it becomes (0,4)because -8 is before the string starts
-console.log(anotherString)
+console.log(anotherString);
+
+const newStringOne = "    tanmay    "
+console.log(newStringOne);
+console.log(newStringOne.trim()); // here trim removes extra spaceses
+
+
+const url = "https://Tanmay.com/tanmay%20lokhande" //instead of https://Tanmay.com/tanmay lokhande
+
+
+console.log(url.replace('%20','-'));       // replacing  the term %20 with -
+
+console.log(url.includes('tanmay')); //true
+console.log(url.includes('gmail')); //false
+
+console.log(gameName.split('-'))
