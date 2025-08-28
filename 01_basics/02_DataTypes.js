@@ -18,15 +18,16 @@ let isLoggedIn = false
 // boolean => true / false
 // null => standalone value
 // undefined =>
-// symbol => uniqu
+// symbol => unique
 
 
-//object 
+//object
 
 console.log(typeof "tanmay");
 console.log(typeof age);
 
 
 
-console.log(typeof null); //object khami aahe **locha
+console.log(typeof null); //object       khaami aahe **locha aahe
+
 console.log(typeof undefined);// undefined
