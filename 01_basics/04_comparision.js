@@ -7,8 +7,8 @@
 
 
 
-// console.log("2"  > 1);
-// console.log("02"  > 1);
+// console.log("2"  > 1); // true conversion of string to number done here and then compared
+// console.log("02"  > 1); // true conversion of string to number done here and then compared
 
 
 
@@ -27,7 +27,7 @@
 
 
 // strict check (done by ) ===    it check values as well has theier data types
-console.log("strict check");
+// console.log("strict check");
 
-// console.log("2" == 2);
-console.log("2" === 2);
+// // console.log("2" == 2);
+// console.log("2" === 2);

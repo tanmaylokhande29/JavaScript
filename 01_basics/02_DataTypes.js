@@ -8,13 +8,13 @@ console.log("tanmay");
 
 //datatypes
 
-let name = "tanmay"
+let name = "tanmay";
 let age = 21
 let isLoggedIn = false
 
 // number => 2 to the power 53
 // bigInt
-// string =? " "
+// string => " "
 // boolean => true / false
 // null => standalone value
 // undefined =>

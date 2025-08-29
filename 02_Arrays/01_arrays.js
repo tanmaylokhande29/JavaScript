@@ -46,3 +46,5 @@ console.log("B", myArr);
 const myn2 = myArr.splice(1,3); // prints from 1 to 3
 console.log("C", myArr);// C [ 0, 4, 5 ]  but in splice it removes those element and then print
 console.log(myn2)
+
+
