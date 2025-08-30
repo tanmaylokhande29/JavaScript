@@ -1,75 +1,77 @@
-// # Primitive
+// ---------------- Primitive Data Types ----------------
+// Total 7 Primitive types in JavaScript
+/*
+1. String      → sequence of characters
+2. Number      → all numbers (no int/float distinction, all are Number type)
+3. Boolean     → true/false values
+4. Null        → intentional absence of value (NOT zero)
+5. Undefined   → variable declared but not assigned any value
+6. Symbol      → used to create unique identifiers
+7. BigInt      → very large integers (denoted with 'n' at the end)
+*/
 
-// 7 types:
-          /*  STRING
-              NUMBER
-              BOOLEAN
-              NULL = ITS NOT ZERO BUT A MATTER WHICH WILL NEVER HAVE ANY VALUE
-              UNDEFINED = GIVEN VARIABLE NOT VALUE GIVEN YET
-              SYMBOL = USED TO MAKE ANY VALUE UNIQUE
-              BigInt
+// Number type examples
+const score = 100;
+const ScoreValue = 100.33;
+// Even though one looks like integer and one like float,
+// both are of type "number" in JavaScript
 
-              */
+// Boolean type
+const isLoggedIn = false;
 
-    const score = 100
-    const ScoreValue = 100.33 // here there are no data type like int and float all the value are stored as an interger value
+// Null type
+const outsideTemp = null;
+// Null represents an empty value (deliberate no-value)
 
-    const isLoggedIn = false //here also it automatically assumes that its goona be a boolean data typee t/f .
-    const outsideTemp = null
+// Undefined type
+let userEmail;
+// Variable declared but not initialized → undefined
+let useremail = undefined;
+// Same as above, explicitly set to undefined
 
-    let userEmail; //there no value stored now it is an undefined value but not labeling it also take it as an undefined value
-    //can also be written has
-    let useremail = undefined //both are same
+// Symbol type
+const id = Symbol('123');
+const Anotherid = Symbol('123');
+console.log(id === Anotherid);
+// Even if both symbols have same description, they are UNIQUE → false
 
-
-    //symbol
-    const id = Symbol('123')
-    const Anotherid = Symbol('123')
- // this are not gooona be same even if the data in them is same
-    console.log(id === Anotherid);
-
-
-    const BigNumber = 321654987546412364654n // here n represents big int
-
-
-
-
-// Reference (Non-Primitive)
-
-              /*
-              Arrays
-              Objects
-              Functions
-
-            when data type is checked all the above 3 non premitive values are considered as an OBJECT value
-              */
-
-    const heros = ["shaktiman","naagraj","doga"] //array
-
-    let myobj={         //object
-        name: "hitesh",
-        age: 21,
-
-    }
+// BigInt type
+const BigNumber = 321654987546412364654n;
+// BigInt numbers are written with 'n' at the end
 
 
-    const myFunction = function(){
-        console.log("hello world");
-    }
+// ---------------- Reference (Non-Primitive) Data Types ----------------
+/*
+These are not primitive, instead stored as references in memory:
+1. Arrays
+2. Objects
+3. Functions
+
+typeof always returns "object" for these (except functions which return "function")
+*/
+
+// Array
+const heros = ["shaktiman", "naagraj", "doga"];
+
+// Object
+let myobj = {
+    name: "hitesh",
+    age: 21,
+};
+
+// Function
+const myFunction = function () {
+    console.log("hello world");
+};
 
 
-    console.log(typeof BigNumber) // here typeof is used to see the data type of the variable BigNumber
+// ---------------- typeof Operator ----------------
+// typeof is used to check data type of a variable
 
-     console.log(typeof outsideTemp ); // value comes object even if its null has it cant be changed it gives as an object
+console.log(typeof BigNumber);     // "bigint"
+console.log(typeof outsideTemp);   // "object" (special case: typeof null = object)
+console.log(typeof ScoreValue);    // "number"
 
-      console.log(typeof ScoreValue);   // number
-
-
-
-      // all the given data below are considered as an object
-
-      console.log(typeof myFunction);  // gives type function ::::: here too it is object and it also  called as an object function
-
-      console.log(typeof heros);  // object
-
-      console.log(typeof myobj); //objects
+console.log(typeof myFunction);    // "function" (internally still object type → called "object function")
+console.log(typeof heros);         // "object"
+console.log(typeof myobj);         // "object"

@@ -1,79 +1,70 @@
-// strings can be desplayed using "--" or '--'in js
-// "Hello" + "world" = Hello world
-
+// -------------------- STRING BASICS --------------------
+// Strings can be written using "" or ''
+// Example: "Hello" + "World" = "HelloWorld"
 
 const name = "tanmay"
 const repoCount = 50
 
-console.log(name + repoCount + " value");  // not recommneded out dated
+console.log(name + repoCount + " value");
+// ❌ Outdated concatenation style → avoid
 
-// `` thisare called ahs backticks
+// ✅ Modern way: Backticks (``) → Template Literals (Interpolation)
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+// Easy to read, can add variables inside ${}
 
 
-
-// use this method
-console.log(`hello my name is ${name} and my repo count is ${repoCount}`);//  `` string interpolation ...creating placeholders
-// we can edit it on the way
-
+// -------------------- STRING OBJECT --------------------
 const gameName = new String('tanmay-sl-com')
-// String {'tanmay'}
+// It’s like an object wrapper around string with extra methods
+// Output looks like:
+// String {'tanmay-sl-com'}
 // 0: "t"
 // 1: "a"
-// 2: "n"
-// 3: "m"
-// 4: "a"
-// 5: "y"
-// length: 6
-// [[Prototype]]: String
-// [[PrimitiveValue]]: "tanmay"
+// ...
+// length: 13
 
-console.log(gameName[0]);//refer the above example for understanding
-console.log(gameName.__proto__);
-
-console.log(gameName.length);
-console.log(gameName.toUpperCase());// from the rev-memory -> string is a primitive data so the data is staticaly changed here means no real data was harmned here
-
-console.log(gameName.charAt("a"));//charAt("a") → expects a number, but you gave a string "a".
-
-/* JavaScript tries to convert "a" to a number:
-
-charAt("a") → expects a number, but you gave a string "a".
-JavaScript tries to convert "a" to a number:
-    Number("a") → NaN  // Not a Number
-So it's the same as writing:
-    gameName.charAt(NaN)
-When charAt() gets NaN, it treats it as 0.
-
-Therefore, gameName.charAt(NaN) → gameName.charAt(0)
-
-gameName.charAt(0) → "T" (because "T" is the first character in "Tanmay")
-*/
-
-console.log(gameName.charAt(2)); // output: "n"
+console.log(gameName[0]);        // "t" → access by index
+console.log(gameName.__proto__); // shows String prototype methods
 
 
-// char to num
-console.log(gameName.indexOf('a'));
+// -------------------- STRING PROPERTIES --------------------
+console.log(gameName.length);       // 13
+console.log(gameName.toUpperCase()); // "TANMAY-SL-COM"
+// ⚠️ Note: Original string is NOT changed (strings are immutable)
 
 
-const newstring = gameName.substring(0,4)
-console.log(newstring);
+// -------------------- CHARACTERS & INDEX --------------------
+console.log(gameName.charAt(2));    // "n"
+// If you pass string inside charAt("a"), JS converts it to NaN → treated as 0
+// So gameName.charAt("a") = gameName.charAt(0) = "t"
+
+console.log(gameName.indexOf('a')); // 1 (first position of 'a')
 
 
-const anotherString = gameName.slice(-8,4) //it becomes (0,4)because -8 is before the string starts
-console.log(anotherString);
+// -------------------- SUBSTRING vs SLICE --------------------
+const newstring = gameName.substring(0, 4)
+console.log(newstring);             // "tanm"
+// substring(start, end) → takes from index 0 to 3
 
+const anotherString = gameName.slice(-8, 4)
+console.log(anotherString);         // "tanm"
+// slice allows negative index (starts from end)
+
+
+// -------------------- TRIM (remove spaces) --------------------
 const newStringOne = "    tanmay    "
-console.log(newStringOne);
-console.log(newStringOne.trim()); // here trim removes extra spaceses
+console.log(newStringOne);          // "    tanmay    "
+console.log(newStringOne.trim());   // "tanmay"
 
 
-const url = "https://Tanmay.com/tanmay%20lokhande" //instead of https://Tanmay.com/tanmay lokhande
+// -------------------- REPLACE & INCLUDES --------------------
+const url = "https://Tanmay.com/tanmay%20lokhande"
+console.log(url.replace('%20','-')); // "https://Tanmay.com/tanmay-lokhande"
+
+console.log(url.includes('tanmay')); // true
+console.log(url.includes('gmail'));  // false
 
 
-console.log(url.replace('%20','-'));       // replacing  the term %20 with -
+// -------------------- SPLIT (string → array) --------------------
+console.log(gameName.split('-'));   // ["tanmay", "sl", "com"]
 
-console.log(url.includes('tanmay')); //true
-console.log(url.includes('gmail')); //false
-
-console.log(gameName.split('-'))
