@@ -1,33 +1,45 @@
-"use strict"; // treat all JS code as newer version
-
-//  alert(3+3) //we are using nodejs not browser engine
-            // code readablity should be high
-console.log(3+3);
-
-console.log("tanmay");
-
-//datatypes
-
-let name = "tanmay";
-let age = 21
-let isLoggedIn = false
-
-// number => 2 to the power 53
-// bigInt
-// string => " "
-// boolean => true / false
-// null => standalone value
-// undefined =>
-// symbol => unique
+"use strict";
+// "use strict" → forces JavaScript to run in strict mode (treats code as modern JS, catches errors early)
 
 
-//object
+// =====================
+// Example: simple operations
+// =====================
 
-console.log(typeof "tanmay");
-console.log(typeof age);
+// alert(3+3)
+// This will not work in Node.js (works only in browsers)
+// Because Node.js does not have "alert()" function
+
+console.log(3+3);     // 6
+console.log("tanmay"); // string output
 
 
+// =====================
+// Data types
+// =====================
 
-console.log(typeof null); //object       khaami aahe **locha aahe
+let name = "tanmay";       // string
+let age = 21;              // number
+let isLoggedIn = false;    // boolean
 
-console.log(typeof undefined);// undefined
+
+// number → can hold values up to 2^53 safely
+// bigint → for very large numbers
+// string → written in " " or ' '
+// boolean → true / false
+// null → standalone value (intentionally empty)
+// undefined → variable declared but not assigned
+// symbol → unique identifier (used in advanced cases)
+
+
+// =====================
+// typeof operator → check type of a value
+// =====================
+
+console.log(typeof "tanmay");   // string
+console.log(typeof age);        // number
+
+
+// Special cases
+console.log(typeof null);       // object   (bug in JavaScript design, historical issue)
+console.log(typeof undefined);  // undefined
