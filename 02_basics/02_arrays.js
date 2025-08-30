@@ -9,12 +9,13 @@ const dc_heros = ["superman", "flash", "batman"];
 // =====================
 // ✅ Pushing one array into another
 // =====================
-// marvel_heros.push(dc_heros);
+marvel_heros.push(dc_heros);
 // console.log(marvel_heros);
-// Output: [ 'thor', 'ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
+Output: [ 'thor', 'ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
 // ⚠️ Here dc_heros is added as a single element (nested array)
 
 // console.log(marvel_heros[3][1]);
+
 // 3 → represents dc_heros array (4th element)
 // [1] → second element inside dc_heros → "flash"
 
