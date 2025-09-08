@@ -11,6 +11,7 @@ console.log(name + repoCount + " value");
 // ✅ Modern way: Backticks (``) → Template Literals (Interpolation)
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 // Easy to read, can add variables inside ${}
+//when we use backtick we can write like above method if we use " "then it works as a string
 
 
 // -------------------- STRING OBJECT --------------------

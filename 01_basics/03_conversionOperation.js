@@ -75,8 +75,8 @@ let valueInNumber4 = Number(score4)
 // =====================
 // Number to String Conversion
 // =====================
-// let someNumber = 33
-// let stringNumber = String(someNumber)
+let someNumber = 33
+let stringNumber = String(someNumber)
 // console.log(stringNumber);         // "33"
 // console.log(typeof stringNumber);  // string
 
@@ -115,7 +115,7 @@ let str3 = str1 + str2
 // =====================
 // Precedence Example
 // =====================
-// console.log((3 + 2) * 5 % 3 );
+// console.log((3 + 2) * 5 %  3 );
 // (3+2)=5 → 5*5=25 → 25%3=1
 
 
@@ -132,4 +132,5 @@ let str3 = str1 + str2
 // =====================
 // let numCounter = 100
 // numCounter++;  // 101
+// numCounter++;  // 102
 // console.log(numCounter);

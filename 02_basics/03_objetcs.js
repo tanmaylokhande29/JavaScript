@@ -20,14 +20,14 @@ const JsUser = {
 // ---------------- ACCESSING VALUES ----------------
 
 // mostly use dot notation to access properties
-console.log(JsUser.email);
+// console.log(JsUser.email);
 
 // when no option then use square brackets (for keys with spaces or quotes)
-console.log(JsUser["email"]);
-console.log(JsUser["full name"]);
+// console.log(JsUser["email"]);
+// console.log(JsUser["full name"]);
 
 // accessing Symbol property (MUST use [] with the symbol reference)
-console.log(JsUser[mySym]);
+// console.log(JsUser[mySym]);
 
 // ---------------- MODIFYING VALUES ----------------
 
@@ -35,22 +35,22 @@ JsUser.email = "tanmay@chatGpt.com"; // changed the email successfully
 
 // FREEZING object -> makes object IMMUTABLE (locked)
 // after freezing -> cannot ADD, DELETE or UPDATE properties
-Object.freeze(JsUser);
+//Object.freeze(JsUser);
 
 JsUser.email = "tanmay2964@gmail.com"; // will NOT change (because object is frozen)
-console.log(JsUser.email); // output still: tanmay@chatGpt.com
+//console.log(JsUser.email); // output still: tanmay@chatGpt.com
 
 // ---------------- ADDING METHODS ----------------
 
 // function stored inside object -> called METHOD
 JsUser.greeting = function () {
   console.log("hello Js User");
-};
+}
 
 // using `this` -> refers to the SAME object (JsUser here)
 JsUser.greeting2 = function () {
   console.log(`hello Js User, ${this.name}`);
-};
+}
 
 // ---------------- CALLING METHODS ----------------
 console.log(JsUser.greeting()); // prints: hello Js User + undefined (because console.log inside + outer console.log)
