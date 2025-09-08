@@ -51,11 +51,33 @@ const users =[
 ]
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
-//above it is checking whether the tinderuser has the property 'isLoggedIn' and tells tru or false 
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+//above it is checking whether the tinderuser has the property 'isLoggedIn' and tells tru or false
+
+
+
+const course = {
+  courseName : "javascript",
+  price: "999",
+  Instructor: "Tanmay"
+}
+
+// course.Instructor
+const{Instructor} = course
+
+console.log(Instructor);
+
+
+
+//api's
+// {
+//   "name": "tanmay",
+//   "courseName": "js in hindi",
+//   "price":"free"
+// }
