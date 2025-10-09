@@ -31,6 +31,7 @@ buttons.forEach(function(button){
     }
   })
 });
+<<<<<<< HEAD
 
 ```
 
@@ -69,3 +70,6 @@ const form = document.querySelector('form')
 
  });
 ```
+=======
+```
+>>>>>>> e9864ca00c9d27b27ba4902af20fdade58aab53d
