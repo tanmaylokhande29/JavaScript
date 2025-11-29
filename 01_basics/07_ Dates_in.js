@@ -1,18 +1,17 @@
 // Dates
 
-// let myDate = new Date()
+let myDate = new Date()
 // Creates a new Date object with the current date and time
-
-// console.log(myDate.toString());
+console.log(myDate.toString());
 // Full date and time string → e.g., "Fri Jul 26 2025 22:35:00 GMT+0530 (India Standard Time)"
 
-// console.log(myDate.toDateString());
+console.log(myDate.toDateString());
 // Returns only the date part in a readable format → "Fri Jul 26 2025"
 
 // console.log(myDate.toISOString());
 // Returns date in ISO standard format → "2025-07-26T17:05:00.000Z"
 
-// console.log(myDate.toLocaleString());
+console.log(myDate.toLocaleString());
 // Returns date & time in local format → e.g., "26/7/2025, 10:35:00 pm"
 
 // console.log(myDate.toTimeString());
@@ -75,13 +74,13 @@ let myTimeStamp = Date.now()
 let newDate = new Date()
 // Creates a new Date object with current date & time
 
-console.log(newDate);
+// console.log(newDate);
 // Logs the full date object
 
-console.log(newDate.getMonth() + 1);
+// console.log(newDate.getMonth() + 1);
 // Returns current month (0-indexed, so add 1 to make it 1-indexed)
 
-console.log(newDate.getDay());
+// console.log(newDate.getDay());
 // Returns the day of the week (0 = Sunday, 6 = Saturday)
 
 

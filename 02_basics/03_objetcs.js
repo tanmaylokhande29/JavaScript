@@ -35,23 +35,23 @@ JsUser.email = "tanmay@chatGpt.com"; // changed the email successfully
 
 // FREEZING object -> makes object IMMUTABLE (locked)
 // after freezing -> cannot ADD, DELETE or UPDATE properties
-//Object.freeze(JsUser);
+Object.freeze(JsUser);
 
 JsUser.email = "tanmay2964@gmail.com"; // will NOT change (because object is frozen)
-//console.log(JsUser.email); // output still: tanmay@chatGpt.com
+// console.log(JsUser.email); // output still: tanmay@chatGpt.com
 
 // ---------------- ADDING METHODS ----------------
 
 // function stored inside object -> called METHOD
 JsUser.greeting = function () {
-  console.log("hello Js User");
+  console.log("hello Js User");``
 }
 
 // using `this` -> refers to the SAME object (JsUser here)
 JsUser.greeting2 = function () {
   console.log(`hello Js User, ${this.name}`);
-}
+}``
 
 // ---------------- CALLING METHODS ----------------
-console.log(JsUser.greeting()); // prints: hello Js User + undefined (because console.log inside + outer console.log)
-console.log(JsUser.greeting2()); // prints: hello Js User, Tanmay + undefined
+// console.log(JsUser.greeting()); // prints: hello Js User + undefined (because console.log inside + outer console.log)
+// console.log(JsUser.greeting2()); // prints: hello Js User, Tanmay + undefined

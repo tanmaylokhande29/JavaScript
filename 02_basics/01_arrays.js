@@ -17,12 +17,14 @@ const myArr2= new Array(1,2,3,4)        // another way (not used much)
 // myArr.push(6)   // adds element at the END
 // myArr.push(7)   // adds 7 at the END
 // myArr.pop()     // removes LAST element (no value needed)
+// console.log(myArr);
 
 
-// myArr.unshift(9) // adds element at the START (index 0)
-// myArr.shift()    // removes FIRST element
+myArr.unshift(9) // adds element at the START (index 0)
+myArr.shift()    // removes FIRST element
 
 // ⚠️ push/pop are faster than unshift/shift (because shifting takes time)
+// console.log(myArr);
 
 
 // =====================
@@ -37,8 +39,8 @@ const myArr2= new Array(1,2,3,4)        // another way (not used much)
 // ✅ Convert Array to String
 // =====================
 
-// const newArr = myArr.join()
-// console.log(newArr)           // "0,1,2,3,4,5"
+//  const newArr = myArr.join('-')
+//   console.log(newArr)           // "0,1,2,3,4,5"
 // console.log(typeof newArr)    // string
 
 
@@ -47,12 +49,13 @@ const myArr2= new Array(1,2,3,4)        // another way (not used much)
 // =====================
 
 // Slice → copies part of array, DOES NOT change original
-console.log("A", myArr);          // A [0,1,2,3,4,5]
-const myn1 = myArr.slice(1,3);    // copy elements from index 1 to <3
-console.log(myn1);                // [1,2]
-console.log("B", myArr);          // original array unchanged → [0,1,2,3,4,5]
 
-// Splice → removes elements, CHANGES original array
+// console.log("A", myArr);          // A [0,1,2,3,4,5]
+// const myn1 = myArr.slice(1,3);    // copy elements from index 1 to <3
+// console.log(myn1);                // [1,2]
+// console.log("B", myArr);          // original array unchanged → [0,1,2,3,4,5]
+
+ // Splice → removes elements, CHANGES original array
 const myn2 = myArr.splice(1,3);   // removes 3 elements starting from index 1
 console.log("C", myArr);          // [0,4,5] → original array changed
 console.log(myn2);                // [1,2,3] → removed elements returned

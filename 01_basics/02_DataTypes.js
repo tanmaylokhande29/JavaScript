@@ -29,7 +29,6 @@ let isLoggedIn = false;    // boolean
 // boolean → true / false
 // null → standalone value (intentionally empty)
 // undefined → variable declared but not assigned
-// symbol → unique identifier (used in advanced cases)
 
 
 // =====================

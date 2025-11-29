@@ -6,10 +6,10 @@ const score = 400
 
 const balance = new Number(100)
 // Creating a Number object explicitly using the Number constructor (less common in practice)
-
 // console.log(balance);
 
 // console.log(balance.toString().length);
+
 // Converts number to string → "100", then gets length → 3 characters
 
 // console.log(balance.toFixed(2));
@@ -38,16 +38,16 @@ const hundreds = 1000000
 // console.log(Math);
 // Math is a built-in object that provides mathematical functions and constants
 
-// console.log(Math.abs(-4));
+console.log(Math.abs(-4));
 // Converts negative number to positive → returns 4
 
-// console.log(Math.abs(4));
+console.log(Math.abs(4));
 // Positive remains positive → returns 4
 
-// console.log(Math.round(4.3));
+console.log(Math.round(4.49));
 // Rounds to nearest integer → 4
 
-// console.log(Math.round(4.6));
+console.log(Math.round(4.6));
 // Rounds to nearest integer → 5
 
 // console.log(Math.ceil(4.2));
@@ -64,7 +64,7 @@ const hundreds = 1000000
 
 
 
-console.log(Math.random());
+// console.log(Math.random());
 // Generates a random decimal number between 0 (inclusive) and 1 (exclusive)
 
 console.log((Math.random()*10) + 1);
@@ -77,7 +77,8 @@ console.log(Math.floor(Math.random()*10) + 1);
 const min = 10
 const max = 20
 
-console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+// console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+
 // Formula to generate a random integer between min and max (both inclusive)
 // (max - min + 1) ensures correct range size
 // Math.random() * range gives a number between 0 and range
