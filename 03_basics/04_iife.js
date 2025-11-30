@@ -1,15 +1,32 @@
-// Immediately Invoked Function Expressions (IIFE)
+// ------------------------------ IIFE ------------------------------
+// IIFE = Immediately Invoked Function Expression
+// Meaning: The function runs IMMEDIATELY as soon as it is defined.
+// We do NOT call it separately like chai().
+// Syntax rule: ( function definition ) ( execution )
+// Also known as: ()()
 
-
-(function chai(){
-  // named iifi
+// ----------------- Named IIFE -----------------
+(function chai() {
+  // This function has a name "chai"
   console.log(`DB connected`);
 })();
-// to iife we dont call chai() but we write () and function into the brackets
+// Explanation:
+// 1st () → wraps the function so JS treats it as an expression (not declaration)
+// 2nd () → immediately executes it
 
-// (def of the function) (execution)  => ()()
 
-((name) => { //unamed iifi
-  console.log(`DB Connected two ${name} `);
 
-}) ('tanmay')
+// ----------------- Unnamed (Arrow) IIFE -----------------
+((name) => {
+  console.log(`DB Connected to ${name}`);
+})('tanmay');
+// Here the function has NO name (arrow function IIFE)
+// We pass "tanmay" directly during execution
+
+
+
+// ----------------- Another Arrow IIFE -----------------
+((hello) => {
+  console.log(`i am ${hello} tanmay lokhande`);
+})('Helllloo!');
+// Same pattern: function inside () runs immediately with provided argument

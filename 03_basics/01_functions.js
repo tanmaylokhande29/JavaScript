@@ -89,7 +89,7 @@ const user = {
 
 function handleObject(anyobject) {
   // Access properties using dot notation
-  console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+  // console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
 handleObject(user);
@@ -108,8 +108,8 @@ const myNewArray = [200, 300, 400, 500];
 
 function returnSecondvalue(getarray) {
   // Indexing starts from 0 → so [1] = second element
-  return getarray[1];
+  console.log( getarray[1]);
 }
 
-// returnSecondvalue(myNewArray);          // 300
-// returnSecondvalue([200,300,400,50]);    // 300
+returnSecondvalue(myNewArray);          // 300
+returnSecondvalue([200,300,400,50]);    // 300
