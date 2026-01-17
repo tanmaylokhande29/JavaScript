@@ -2,44 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM | chai aur code</title>
+    <title>DOM Learning</title>
   </head>
+
   <body style="background-color: #212121; color: white">
     <div class="parent">
 
-      <!-- this is a comment -->
+      <!-- this is a comment in HTML -->
       <div class="day">Monday</div>
       <div class="day">Tuesday</div>
       <div class="day">Wednesday</div>
       <div class="day">Thrusday</div>
       <div class="day">Friday</div>
+
     </div>
   </body>
+
   <script>
+    // ---------------------------------------------------------
+    // SELECTING ELEMENTS
+    // ---------------------------------------------------------
     const parent = document.querySelector('.parent');
-    // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[1].innerHTML);
+    // Selects the FIRST element with class “parent”
+    // In this case <div class="parent"> ... </div>
 
-    for (let i = 0; i < parent.children.length; i++) {
-    //  console.log(parent.children[i].innerHTML);
-  }
-
-  parent.children[1].style.color="orange"
-  // console.log(parent.firstElementChild);
-  // console.log(parent.lastElementChild);
-
-
-  const dayone = document.querySelector('.day')
-  // console.log(dayone);
-  // console.log(dayone.parentElement);
-  // console.log(dayone.nextElementSibling);
-
-
-  console.log("Nodes: ", parent.childNodes);
+    // console.log(parent);           // full DIV element
+    // console.log(parent.children);  // HTMLCollection of all child div.day
+    // console.log(parent.children[1].innerHTML); // "Tuesday"
 
 
 
+    // ---------------------------------------------------------
+    // LOOPING THROUGH CHILDREN OF AN ELEMENT
+    // ---------------------------------------------------------
+    // for (let i = 0; i < parent.children.length; i++) {
+    //   console.log(parent.children[i].innerHTML);
+    // }
+    /*
+      Output:
+      Monday
+      Tuesday
+      Wednesday
+      Thrusday
+      Friday
+    */
+
+    parent.children[1].style.color = "orange"   // styling an element directly
+
+
+    // ---------------------------------------------------------
+    // FIRST & LAST CHILD ELEMENTS
+    // ---------------------------------------------------------
+    // console.log(parent.firstElementChild);  // <div class="day">Monday</div>
+    // console.log(parent.lastElementChild);   // <div class="day">Friday</div>
+
+
+
+    // ---------------------------------------------------------
+    // PARENT & SIBLING RELATIONSHIP
+    // ---------------------------------------------------------
+    const dayone = document.querySelector('.day')
+    // console.log(dayone);               // first .day → Monday
+    // console.log(dayone.parentElement); // the parent div
+    // console.log(dayone.nextElementSibling); // Tuesday
+
+
+
+    // ---------------------------------------------------------
+    // NODE LIST vs CHILDREN
+    // ---------------------------------------------------------
+    console.log("Nodes: ", parent.childNodes);
+
+    /*
+       childNodes gives:
+       - text nodes (line breaks)
+       - comment nodes
+       - element nodes
+
+       Example output:
+       NodeList(11) [text, comment, text, div.day, text, div.day, ... ]
+
+       children ONLY gives element nodes (cleaner):
+       HTMLCollection(5) [div.day, div.day, div.day, div.day, div.day]
+    */
   </script>
 </html>

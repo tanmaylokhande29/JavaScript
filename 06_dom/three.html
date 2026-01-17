@@ -4,20 +4,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chai aur code</title>
   </head>
-  <body style="background-color: #212121; color: white"></body>
-  <script>
-    const div = document.createElement("div");
-    console.log(div);
 
-    div.className = "main";
-    div.id = Math.random() * 10;
-    div.setAttribute("title", "generate a tittle")
-    div.style.backgroundColor="green"
-    div.style.padding="12px"
-    // div.innerHTML-"chai aur code";
+  <body style="background-color: #212121; color: white"></body>
+
+  <script>
+    // -------------------------------
+    // CREATING A NEW <div> ELEMENT
+    // -------------------------------
+    const div = document.createElement('div')
+    console.log(div)
+    // At this point → div exists in memory, NOT inside the document yet
+
+
+    // -------------------------------
+    // SETTING CLASS & ID
+    // -------------------------------
+    div.className = "main"     // add class="main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    // dynamic id: random number between 1–11
+
+
+    // -------------------------------
+    // SETTING ATTRIBUTES
+    // -------------------------------
+    div.setAttribute("title", "generate a title")
+    /*
+      innerText modifies the element content directly
+      setAttribute is cleaner because:
+      - it does NOT overwrite existing properties accidentally
+      - best for setting attributes
+    */
+
+
+    // -------------------------------
+    // INLINE STYLING
+    // -------------------------------
+    div.style.backgroundColor = "green"
+    div.style.padding = "15px"
+
+
+    // -------------------------------
+    // ADDING TEXT INTO THE DIV
+    // -------------------------------
+    // Method 1: direct text (overwrites)
+    // div.innerText = "Chai or Code"
+
+    // Method 2: best practice → createTextNode (faster + cleaner)
     const addText = document.createTextNode("chai aur code")
     div.appendChild(addText)
+    /*
+      createTextNode:
+      - avoids parsing HTML
+      - recommended for adding plain text
+    */
 
+
+    // -------------------------------
+    // FINALLY ADD DIV TO THE PAGE
+    // -------------------------------
     document.body.appendChild(div)
+    // Now the <div> actually appears on the webpage
   </script>
 </html>

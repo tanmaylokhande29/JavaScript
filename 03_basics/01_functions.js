@@ -12,7 +12,7 @@ function sayMyName() {
   console.log("A");
   console.log("Y");
 }
-// sayMyName();
+// sayMyName(); 
 
 
 // -----------------------------------------------------------------------------
@@ -23,20 +23,20 @@ function sayMyName() {
 
 function addTwoNumbers(number1, number2) {
   // Method 1:
-  // let result = number1 + number2;
-  // return result;
+  let result = number1 + number2;
+  return result;
 
   // Method 2 (cleaner):
   // return number1 + number2;
 }
 
 const result = addTwoNumbers(3, 4);
-// console.log("result :", result);  // 7
+console.log("result :", result);  // 7
 
 
 // -----------------------------------------------------------------------------
 // ⭐ DEFAULT PARAMETERS
-// -----------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 // If no value is passed, "sam" becomes the default username.
 
 function loginUserMessage(username = "sam") {

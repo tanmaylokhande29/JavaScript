@@ -10,10 +10,12 @@ for (const num of arr ) {
 }
 
 
-const greetings = "hello world"
+const greetings = "hello world" 
 
 for (const greet of greetings ) {
-    // console.log(greet);
+    // if (greet === " ") continue; // skip the space
+    // if (greet === " ") break; // stops at the first space
+    console.log(greet); // prints space too
 }
 
 //maps
@@ -24,11 +26,11 @@ map.set('USA','United States of America')
 map.set('FR','France')
 map.set('IN','India')
 
-// console.log(map);//know for unique values also follows the order
+console.log(map);//know for unique values also follows the order
 
 for (const [key,value] of map) {
-    // console.log(key,':-',value);
-
+    console.log(key , "->" , value);
+    // console.log(value);
 }
 
 // const myObject ={    //doesnt work for objects
@@ -38,6 +40,6 @@ for (const [key,value] of map) {
 // }
 
 // for (const [key, value] of myObject) {
-//     console.log(key,':-',value);
+//     // console.log(key,':-',value);
 
 // }
